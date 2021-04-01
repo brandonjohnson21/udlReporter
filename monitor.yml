@@ -1,0 +1,24 @@
+# query configuration
+queries:
+  - /api/path?ts={lastts}..{currentts}
+  - /api/path2?ts={lastts}..{currentts}&moreArgs=true
+
+host: https://localhost:8080
+
+# email configuration
+sender: test@test.com
+recipients: 
+  - test1@test.com
+  - test2@test.com
+  - test3@test.com
+smtp: localhost
+
+# number of tracks returned to be considered "good"
+minimumSinceLast: 10000
+# interval between checks in seconds
+interval: 3600
+
+# how many failed checks until an email is sent
+failuresUntilEmail: 1
+# whether to continue to send emails every check before restoral
+sendEmailEveryTime: False
